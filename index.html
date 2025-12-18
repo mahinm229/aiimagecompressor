@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileOptimize Pro - PDF & Image Tools | Compress, Convert, Merge Files Online</title>
+    <meta name="description" content="Free online file optimization tools: Compress PDF, PDF to Word converter, Merge PDF files, Image compression. All tools work in your browser with no file uploads to servers.">
+    <meta name="keywords" content="PDF compressor, PDF to Word, merge PDF, image compression, file optimization, online tools">
+    <meta name="author" content="FileOptimize Pro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="FileOptimize Pro - PDF & Image Tools">
+    <meta property="og:description" content="Free online file optimization tools: Compress PDF, PDF to Word converter, Merge PDF files, Image compression.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #7209b7;
+            --accent: #4cc9f0;
+            --success: #38b000;
+            --warning: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border-radius: 10px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9fafc;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--gray);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            color: var(--gray);
+        }
+
+        /* Tool Navigation */
+        .tool-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .tool-tab {
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .tool-tab:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+
+        .tool-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .tool-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 1100px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .ad-sidebar {
+                order: 2;
+            }
+            
+            .tool-area {
+                order: 1;
+            }
+        }
+
+        /* Tool Area */
+        .tool-area {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tool-section {
+            display: none;
+        }
+
+        .tool-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Upload Areas */
+        .upload-area {
+            border: 3px dashed var(--primary);
+            border-radius: var(--border-radius);
+            padding: 3rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            background: rgba(67, 97, 238, 0.03);
+        }
+
+        .upload-area:hover {
+            background: rgba(67, 97, 238, 0.08);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .upload-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .upload-subtext {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        /* Tool Controls */
+        .controls {
+            margin-bottom: 2rem;
+        }
+
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .control-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .slider-value {
+            min-width: 50px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            height: 8px;
+            border-radius: 4px;
+            background: #e9ecef;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #dee2e6;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            background: white;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+        }
+
+        /* File List for Merge Tool */
+        .file-list {
+            border: 1px solid #dee2e6;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            background: white;
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        .file-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+
+        .file-info {
+            flex: 1;
+        }
+
+        .file-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .file-size {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .move-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--gray);
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .move-btn:hover {
+            color: var(--primary);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn-secondary {
+            background: #e9ecef;
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: #dee2e6;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Results Section */
+        .results {
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .results.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .file-preview {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .preview-box {
+            flex: 1;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .preview-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .preview-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .preview-pdf {
+            width: 100%;
+            height: 200px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .file-stats {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Ad Sidebar */
+        .ad-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .ad-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #dee2e6;
+        }
+
+        .ad-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .ad-code-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .ad-placeholder {
+            text-align: center;
+            color: var(--gray);
+            padding: 1rem;
+        }
+
+        .ad-preview {
+            width: 300px;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* SEO Section */
+        .seo-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .seo-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .seo-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .seo-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .seo-list li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary);
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--gray);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .tool-nav {
+                flex-direction: column;
+            }
+            
+            .tool-tab {
+                justify-content: center;
+            }
+            
+            .file-preview {
+                flex-direction: column;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .main-content {
+                padding: 0 10px;
+            }
+            
+            .tool-area {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .upload-area {
+                padding: 2rem 1rem;
+            }
+            
+            .upload-icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">⚙️</div>
+            <h1>FileOptimize Pro</h1>
+            <p class="tagline">Powerful online tools to compress, convert, and merge PDFs and images. All processing happens in your browser - your files never leave your computer.</p>
+            
+            <!-- Tool Navigation -->
+            <div class="tool-nav">
+                <div class="tool-tab active" data-tool="compress-pdf">
+                    <span class="tool-icon">📄</span>
+                    <span>Compress PDF</span>
+                </div>
+                <div class="tool-tab" data-tool="pdf-to-word">
+                    <span class="tool-icon">🔤</span>
+                    <span>PDF to Word</span>
+                </div>
+                <div class="tool-tab" data-tool="merge-pdf">
+                    <span class="tool-icon">🔄</span>
+                    <span>Merge PDF</span>
+                </div>
+                <div class="tool-tab" data-tool="image-compression">
+                    <span class="tool-icon">🖼️</span>
+                    <span>Image Compression</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Tool Area -->
+            <div class="tool-area">
+                <!-- Compress PDF Tool -->
+                <section id="compress-pdf" class="tool-section active">
+                    <h2>Compress PDF Files</h2>
+                    <p>Reduce PDF file size while maintaining quality. Perfect for email attachments and web uploads.</p>
+                    
+                    <div class="upload-area" id="pdf-upload-area">
+                        <div class="upload-icon">📤</div>
+                        <div class="upload-text">Drop PDF files here or click to browse</div>
+                        <div class="upload-subtext">Maximum file size: 10MB per file</div>
+                        <input type="file" class="file-input" id="pdf-input" accept=".pdf">
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label class="control-label">Compression Level</label>
+                            <div class="slider-container">
+                                <span class="slider-value" id="pdf-compression-value">Medium</span>
+                                <input type="range" id="pdf-compression-level" min="1" max="3" value="2" step="1">
+                                <span>Quality: <span id="pdf-quality-text">Balanced</span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label class="control-label" for="pdf-output-quality">Output Quality</label>
+                            <select id="pdf-output-quality">
+                                <option value="high">High (Best quality, moderate compression)</option>
+                                <option value="medium" selected>Medium (Good quality, good compression)</option>
+                                <option value="low">Low (Acceptable quality, maximum compression)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="compress-pdf-btn">
+                            <span>🔧</span> Compress PDF
+                        </button>
+                        <button class="btn btn-secondary" id="reset-pdf-btn">
+                            <span>🗑️</span> Clear
+                        </button>
+                    </div>
+                    
+                    <!-- Results Section -->
+                    <div class="results" id="pdf-results">
+                        <div class="results-header">
+                            <h3>Compression Results</h3>
+                            <button class="btn btn-primary" id="download-pdf-btn">
+                                <span>⬇️</span> Download Compressed PDF
+                            </button>
+                        </div>
+                        
+                        <div class="file-preview">
+                            <div class="preview-box">
+                                <div class="preview-title">Original PDF</div>
+                                <div class="preview-pdf" id="original-pdf-preview">
+                                    📄
+                                </div>
+                                <div class="file-info">
+                                    <div><strong>File:</strong> <span id="original-pdf-name">--</span></div>
+                                    <div><strong>Size:</strong> <span id="original-pdf-size">--</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-box">
+                                <div class="preview-title">Compressed PDF</div>
+                                <div class="preview-pdf" id="compressed-pdf-preview">
+                                    📄
+                                </div>
+                                <div class="file-info">
+                                    <div><strong>File:</strong> <span id="compressed-pdf-name">--</span></div>
+                                    <div><strong>Size:</strong> <span id="compressed-pdf-size">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="pdf-savings">--</div>
+                                <div class="stat-label">Size Reduced</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="pdf-compression-ratio">--</div>
+                                <div class="stat-label">Compression Ratio</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="pdf-quality-retained">--</div>
+                                <div class="stat-label">Quality Retained</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- PDF to Word Tool -->
+                <section id="pdf-to-word" class="tool-section">
+                    <h2>Convert PDF to Word</h2>
+                    <p>Convert PDF documents to editable Word format while preserving formatting and layout.</p>
+                    
+                    <div class="upload-area" id="pdf-word-upload-area">
+                        <div class="upload-icon">📤</div>
+                        <div class="upload-text">Drop PDF files here or click to browse</div>
+                        <div class="upload-subtext">Supports text-based PDFs (scanned PDFs may have limited accuracy)</div>
+                        <input type="file" class="file-input" id="pdf-word-input" accept=".pdf">
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label class="control-label" for="word-output-format">Output Format</label>
+                            <select id="word-output-format">
+                                <option value="docx">Microsoft Word (.docx) - Recommended</option>
+                                <option value="doc">Word 97-2003 (.doc)</option>
+                                <option value="rtf">Rich Text Format (.rtf)</option>
+                                <option value="txt">Plain Text (.txt)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label class="control-label" for="word-preserve-formatting">Preserve Formatting</label>
+                            <select id="word-preserve-formatting">
+                                <option value="high">High (Keep layout, fonts, images)</option>
+                                <option value="medium" selected>Medium (Keep basic formatting)</option>
+                                <option value="low">Low (Text only, no formatting)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="convert-pdf-word-btn">
+                            <span>🔄</span> Convert to Word
+                        </button>
+                        <button class="btn btn-secondary" id="reset-pdf-word-btn">
+                            <span>🗑️</span> Clear
+                        </button>
+                    </div>
+                    
+                    <!-- Results Section -->
+                    <div class="results" id="pdf-word-results">
+                        <div class="results-header">
+                            <h3>Conversion Results</h3>
+                            <button class="btn btn-primary" id="download-word-btn">
+                                <span>⬇️</span> Download Word Document
+                            </button>
+                        </div>
+                        
+                        <div class="file-preview">
+                            <div class="preview-box">
+                                <div class="preview-title">Original PDF</div>
+                                <div class="preview-pdf">
+                                    📄
+                                </div>
+                                <div class="file-info">
+                                    <div><strong>File:</strong> <span id="original-pdf-word-name">--</span></div>
+                                    <div><strong>Size:</strong> <span id="original-pdf-word-size">--</span></div>
+                                    <div><strong>Pages:</strong> <span id="original-pdf-pages">--</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-box">
+                                <div class="preview-title">Converted Word</div>
+                                <div class="preview-pdf">
+                                    📝
+                                </div>
+                                <div class="file-info">
+                                    <div><strong>Format:</strong> <span id="word-format">--</span></div>
+                                    <div><strong>Size:</strong> <span id="converted-word-size">--</span></div>
+                                    <div><strong>Accuracy:</strong> <span id="conversion-accuracy">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="word-conversion-time">--</div>
+                                <div class="stat-label">Conversion Time</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="word-pages-converted">--</div>
+                                <div class="stat-label">Pages Converted</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="word-formatting-retained">--</div>
+                                <div class="stat-label">Formatting Retained</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Merge PDF Tool -->
+                <section id="merge-pdf" class="tool-section">
+                    <h2>Merge PDF Files</h2>
+                    <p>Combine multiple PDF files into a single document. Arrange pages in any order you want.</p>
+                    
+                    <div class="upload-area" id="merge-pdf-upload-area">
+                        <div class="upload-icon">📤</div>
+                        <div class="upload-text">Drop PDF files here or click to browse multiple files</div>
+                        <div class="upload-subtext">Hold Ctrl/Cmd to select multiple files. Maximum total size: 20MB</div>
+                        <input type="file" class="file-input" id="merge-pdf-input" accept=".pdf" multiple>
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label class="control-label">Files to Merge (Drag to reorder)</label>
+                            <div class="file-list" id="merge-file-list">
+                                <!-- Files will be added here -->
+                                <div class="empty-state">No files selected. Upload PDF files to begin.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label class="control-label" for="merge-output-quality">Output Quality</label>
+                            <select id="merge-output-quality">
+                                <option value="original">Keep original quality</option>
+                                <option value="optimized" selected>Optimize (Balance quality and size)</option>
+                                <option value="compressed">Compressed (Smaller file size)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="merge-pdf-btn">
+                            <span>🔄</span> Merge PDF Files
+                        </button>
+                        <button class="btn btn-secondary" id="reset-merge-pdf-btn">
+                            <span>🗑️</span> Clear All
+                        </button>
+                    </div>
+                    
+                    <!-- Results Section -->
+                    <div class="results" id="merge-pdf-results">
+                        <div class="results-header">
+                            <h3>Merge Results</h3>
+                            <button class="btn btn-primary" id="download-merged-pdf-btn">
+                                <span>⬇️</span> Download Merged PDF
+                            </button>
+                        </div>
+                        
+                        <div class="file-preview">
+                            <div class="preview-box">
+                                <div class="preview-title">Merged PDF Preview</div>
+                                <div class="preview-pdf">
+                                    📑
+                                </div>
+                                <div class="file-info">
+                                    <div><strong>Total Files:</strong> <span id="total-files-merged">--</span></div>
+                                    <div><strong>Total Pages:</strong> <span id="total-pages-merged">--</span></div>
+                                    <div><strong>File Size:</strong> <span id="merged-pdf-size">--</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-box">
+                                <div class="preview-title">Merge Summary</div>
+                                <div style="padding: 1rem;">
+                                    <div id="merge-summary">
+                                        <p>Files merged in the following order:</p>
+                                        <ul id="merge-order-list" style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                            <!-- Merge order will be listed here -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="merge-total-size">--</div>
+                                <div class="stat-label">Total Original Size</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="merge-final-size">--</div>
+                                <div class="stat-label">Merged File Size</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="merge-savings">--</div>
+                                <div class="stat-label">Size Saved</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Image Compression Tool -->
+                <section id="image-compression" class="tool-section">
+                    <h2>Image Compression</h2>
+                    <p>Optimize images for web and mobile. Reduce file size without noticeable quality loss.</p>
+                    
+                    <div class="upload-area" id="image-upload-area">
+                        <div class="upload-icon">📤</div>
+                        <div class="upload-text">Drop images here or click to browse</div>
+                        <div class="upload-subtext">Supports JPG, PNG, WebP, GIF. Maximum size: 5MB per image</div>
+                        <input type="file" class="file-input" id="image-input" accept=".jpg,.jpeg,.png,.webp,.gif">
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label class="control-label">Compression Level</label>
+                            <div class="slider-container">
+                                <span class="slider-value" id="image-compression-value">75%</span>
+                                <input type="range" id="image-compression-level" min="10" max="95" value="75" step="5">
+                                <span>Quality: <span id="image-quality-text">High</span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label class="control-label" for="image-output-format">Output Format</label>
+                            <select id="image-output-format">
+                                <option value="same">Same as original</option>
+                                <option value="webp">WebP (Best compression)</option>
+                                <option value="jpeg">JPEG (Good for photos)</option>
+                                <option value="png">PNG (For transparency)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label class="control-label" for="image-resize">Resize Image</label>
+                            <select id="image-resize">
+                                <option value="none" selected>Keep original dimensions</option>
+                                <option value="hd">HD (1920x1080)</option>
+                                <option value="medium">Medium (1280x720)</option>
+                                <option value="small">Small (800x600)</option>
+                                <option value="custom">Custom dimensions</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="compress-image-btn">
+                            <span>🖼️</span> Compress Image
+                        </button>
+                        <button class="btn btn-secondary" id="reset-image-btn">
+                            <span>🗑️</span> Clear
+                        </button>
+                    </div>
+                    
+                    <!-- Results Section -->
+                    <div class="results" id="image-results">
+                        <div class="results-header">
+                            <h3>Compression Results</h3>
+                            <button class="btn btn-primary" id="download-image-btn">
+                                <span>⬇️</span> Download Compressed Image
+                            </button>
+                        </div>
+                        
+                        <div class="file-preview">
+                            <div class="preview-box">
+                                <div class="preview-title">Original Image</div>
+                                <img class="preview-image" id="original-image-preview" src="" alt="Original image">
+                                <div class="file-info">
+                                    <div><strong>Size:</strong> <span id="original-image-size">--</span></div>
+                                    <div><strong>Dimensions:</strong> <span id="original-image-dimensions">--</span></div>
+                                    <div><strong>Format:</strong> <span id="original-image-format">--</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-box">
+                                <div class="preview-title">Compressed Image</div>
+                                <img class="preview-image" id="compressed-image-preview" src="" alt="Compressed image">
+                                <div class="file-info">
+                                    <div><strong>Size:</strong> <span id="compressed-image-size">--</span></div>
+                                    <div><strong>Dimensions:</strong> <span id="compressed-image-dimensions">--</span></div>
+                                    <div><strong>Savings:</strong> <span id="image-savings">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="file-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="image-compression-ratio">--</div>
+                                <div class="stat-label">Compression Ratio</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="image-quality-score">--</div>
+                                <div class="stat-label">Quality Score</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="image-format-converted">--</div>
+                                <div class="stat-label">Format</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Loading Indicator -->
+                <div class="loading" id="loading-indicator">
+                    <div class="spinner"></div>
+                    <h3>Processing your files...</h3>
+                    <p>Please wait while we optimize your files. This may take a few moments.</p>
+                </div>
+            </div>
+            
+            <!-- Ad Sidebar -->
+            <div class="ad-sidebar">
+                <!-- Ad Unit 1 -->
+                <div class="ad-container">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-preview" id="ad-preview-1">
+                        Ad Unit 1
+                    </div>
+                    <input type="text" class="ad-code-input" id="ad-code-1" placeholder="Paste AdSense Ad Unit ID here">
+                    <p class="ad-placeholder">Ad will appear here after entering Ad Unit ID</p>
+                </div>
+                
+                <!-- Ad Unit 2 -->
+                <div class="ad-container">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-preview" id="ad-preview-2">
+                        Ad Unit 2
+                    </div>
+                    <input type="text" class="ad-code-input" id="ad-code-2" placeholder="Paste AdSense Ad Unit ID here">
+                    <p class="ad-placeholder">Ad will appear here after entering Ad Unit ID</p>
+                </div>
+                
+                <!-- SEO Info Section -->
+                <div class="seo-section">
+                    <h3>SEO Benefits</h3>
+                    <p>Optimizing your files provides significant SEO advantages:</p>
+                    <ul class="seo-list">
+                        <li>Faster page load times (Google ranking factor)</li>
+                        <li>Improved Core Web Vitals scores</li>
+                        <li>Better mobile performance</li>
+                        <li>Reduced bandwidth usage</li>
+                        <li>Enhanced user experience</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;"><strong>Tip:</strong> Compressed files load faster, reducing bounce rates and improving conversions.</p>
+                </div>
+                
+                <!-- Statistics -->
+                <div class="seo-section">
+                    <h3>Tool Statistics</h3>
+                    <div class="file-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Client-side</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">0ms</div>
+                            <div class="stat-label">Server Delay</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Secure</div>
+                            <div class="stat-label">Your Data</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">All processing happens in your browser. Your files never leave your computer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>FileOptimize Pro - Professional File Optimization Tools</p>
+            <div class="footer-links">
+                <a href="#" onclick="return false;">Privacy Policy</a>
+                <a href="#" onclick="return false;">Terms of Service</a>
+                <a href="#" onclick="return false;">Contact Us</a>
+                <a href="#" onclick="return false;">FAQ</a>
+                <a href="#" onclick="return false;">Blog</a>
+            </div>
+            <p class="copyright">© <span id="current-year">2023</span> FileOptimize Pro. All rights reserved. This tool works entirely in your browser. No files are uploaded to any server.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let currentTool = 'compress-pdf';
+        let currentFiles = {
+            'compress-pdf': null,
+            'pdf-to-word': null,
+            'merge-pdf': [],
+            'image-compression': null
+        };
+        let processingResults = {
+            'compress-pdf': null,
+            'pdf-to-word': null,
+            'merge-pdf': null,
+            'image-compression': null
+        };
+
+        // DOM Elements
+        const toolTabs = document.querySelectorAll('.tool-tab');
+        const toolSections = document.querySelectorAll('.tool-section');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Initialize tool tabs
+            initToolTabs();
+            
+            // Initialize file uploads
+            initFileUploads();
+            
+            // Initialize compression sliders
+            initSliders();
+            
+            // Initialize buttons
+            initButtons();
+            
+            // Initialize ad code inputs
+            initAdInputs();
+            
+            // Set up drag and drop
+            initDragAndDrop();
+        });
+
+        // Tool Tab Navigation
+        function initToolTabs() {
+            toolTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const toolId = this.getAttribute('data-tool');
+                    switchTool(toolId);
+                });
+            });
+        }
+
+        function switchTool(toolId) {
+            // Update active tab
+            toolTabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('data-tool') === toolId) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Update active tool section
+            toolSections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === toolId) {
+                    section.classList.add('active');
+                }
+            });
+            
+            // Hide all results sections
+            document.querySelectorAll('.results').forEach(result => {
+                result.classList.remove('active');
+            });
+            
+            currentTool = toolId;
+        }
+
+        // File Upload Initialization
+        function initFileUploads() {
+            // PDF Compression
+            const pdfUploadArea = document.getElementById('pdf-upload-area');
+            const pdfInput = document.getElementById('pdf-input');
+            
+            pdfUploadArea.addEventListener('click', () => pdfInput.click());
+            pdfInput.addEventListener('change', (e) => handleFileUpload(e, 'compress-pdf'));
+            
+            // PDF to Word
+            const pdfWordUploadArea = document.getElementById('pdf-word-upload-area');
+            const pdfWordInput = document.getElementById('pdf-word-input');
+            
+            pdfWordUploadArea.addEventListener('click', () => pdfWordInput.click());
+            pdfWordInput.addEventListener('change', (e) => handleFileUpload(e, 'pdf-to-word'));
+            
+            // Merge PDF
+            const mergePdfUploadArea = document.getElementById('merge-pdf-upload-area');
+            const mergePdfInput = document.getElementById('merge-pdf-input');
+            
+            mergePdfUploadArea.addEventListener('click', () => mergePdfInput.click());
+            mergePdfInput.addEventListener('change', (e) => handleFileUpload(e, 'merge-pdf'));
+            
+            // Image Compression
+            const imageUploadArea = document.getElementById('image-upload-area');
+            const imageInput = document.getElementById('image-input');
+            
+            imageUploadArea.addEventListener('click', () => imageInput.click());
+            imageInput.addEventListener('change', (e) => handleFileUpload(e, 'image-compression'));
+        }
+
+        // Handle File Uploads
+        function handleFileUpload(event, toolId) {
+            const files = event.target.files;
+            
+            if (toolId === 'merge-pdf') {
+                // For merge tool, handle multiple files
+                if (files.length > 0) {
+                    Array.from(files).forEach(file => {
+                        if (file.type === 'application/pdf') {
+                            currentFiles[toolId].push({
+                                file: file,
+                                name: file.name,
+                                size: file.size,
+                                id: Date.now() + Math.random()
+                            });
+                        }
+                    });
+                    updateMergeFileList();
+                }
+            } else {
+                // For single file tools
+                if (files.length > 0) {
+                    const file = files[0];
+                    currentFiles[toolId] = {
+                        file: file,
+                        name: file.name,
+                        size: file.size,
+                        type: file.type
+                    };
+                    
+                    // Update UI for single file tools
+                    if (toolId === 'compress-pdf') {
+                        document.getElementById('original-pdf-name').textContent = file.name;
+                        document.getElementById('original-pdf-size').textContent = formatFileSize(file.size);
+                    } else if (toolId === 'pdf-to-word') {
+                        document.getElementById('original-pdf-word-name').textContent = file.name;
+                        document.getElementById('original-pdf-word-size').textContent = formatFileSize(file.size);
+                    } else if (toolId === 'image-compression') {
+                        // Preview the image
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            document.getElementById('original-image-preview').src = e.target.result;
+                            document.getElementById('original-image-size').textContent = formatFileSize(file.size);
+                            document.getElementById('original-image-format').textContent = file.type.split('/')[1].toUpperCase();
+                            
+                            // Get image dimensions
+                            const img = new Image();
+                            img.onload = function() {
+                                document.getElementById('original-image-dimensions').textContent = `${img.width} × ${img.height}`;
+                            };
+                            img.src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
+            
+            // Enable the process button
+            enableProcessButton(toolId);
+        }
+
+        // Update Merge File List UI
+        function updateMergeFileList() {
+            const fileList = document.getElementById('merge-file-list');
+            const files = currentFiles['merge-pdf'];
+            
+            if (files.length === 0) {
+                fileList.innerHTML = '<div class="empty-state">No files selected. Upload PDF files to begin.</div>';
+                return;
+            }
+            
+            fileList.innerHTML = '';
+            
+            files.forEach((fileObj, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.setAttribute('data-id', fileObj.id);
+                fileItem.setAttribute('draggable', 'true');
+                
+                fileItem.innerHTML = `
+                    <div class="file-icon">📄</div>
+                    <div class="file-info">
+                        <div class="file-name">${fileObj.name}</div>
+                        <div class="file-size">${formatFileSize(fileObj.size)}</div>
+                    </div>
+                    <div class="file-actions">
+                        <button class="move-btn move-up" data-index="${index}">⬆️</button>
+                        <button class="move-btn move-down" data-index="${index}">⬇️</button>
+                        <button class="move-btn remove-file" data-index="${index}">🗑️</button>
+                    </div>
+                `;
+                
+                fileList.appendChild(fileItem);
+            });
+            
+            // Add event listeners for move buttons
+            document.querySelectorAll('.move-up').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    if (index > 0) {
+                        moveFileInArray(index, index - 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.move-down').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    const files = currentFiles['merge-pdf'];
+                    if (index < files.length - 1) {
+                        moveFileInArray(index, index + 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.remove-file').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    removeFileFromMerge(index);
+                });
+            });
+            
+            // Add drag and drop for reordering
+            initDragAndDropForMerge();
+        }
+
+        // Move file in merge array
+        function moveFileInArray(fromIndex, toIndex) {
+            const files = currentFiles['merge-pdf'];
+            const fileToMove = files.splice(fromIndex, 1)[0];
+            files.splice(toIndex, 0, fileToMove);
+            updateMergeFileList();
+        }
+
+        // Remove file from merge array
+        function removeFileFromMerge(index) {
+            currentFiles['merge-pdf'].splice(index, 1);
+            updateMergeFileList();
+        }
+
+        // Initialize Sliders
+        function initSliders() {
+            // PDF Compression Slider
+            const pdfCompressionSlider = document.getElementById('pdf-compression-level');
+            const pdfCompressionValue = document.getElementById('pdf-compression-value');
+            const pdfQualityText = document.getElementById('pdf-quality-text');
+            
+            pdfCompressionSlider.addEventListener('input', function() {
+                const value = parseInt(this.value);
+                const qualityMap = {1: 'Low', 2: 'Medium', 3: 'High'};
+                pdfCompressionValue.textContent = qualityMap[value];
+                pdfQualityText.textContent = qualityMap[value];
+            });
+            
+            // Image Compression Slider
+            const imageCompressionSlider = document.getElementById('image-compression-level');
+            const imageCompressionValue = document.getElementById('image-compression-value');
+            const imageQualityText = document.getElementById('image-quality-text');
+            
+            imageCompressionSlider.addEventListener('input', function() {
+                const value = parseInt(this.value);
+                imageCompressionValue.textContent = `${value}%`;
+                
+                if (value >= 80) {
+                    imageQualityText.textContent = 'Excellent';
+                } else if (value >= 60) {
+                    imageQualityText.textContent = 'High';
+                } else if (value >= 40) {
+                    imageQualityText.textContent = 'Good';
+                } else if (value >= 20) {
+                    imageQualityText.textContent = 'Fair';
+                } else {
+                    imageQualityText.textContent = 'Low';
+                }
+            });
+        }
+
+        // Initialize Buttons
+        function initButtons() {
+            // PDF Compression
+            document.getElementById('compress-pdf-btn').addEventListener('click', processPdfCompression);
+            document.getElementById('reset-pdf-btn').addEventListener('click', () => resetTool('compress-pdf'));
+            document.getElementById('download-pdf-btn').addEventListener('click', downloadCompressedPdf);
+            
+            // PDF to Word
+            document.getElementById('convert-pdf-word-btn').addEventListener('click', processPdfToWord);
+            document.getElementById('reset-pdf-word-btn').addEventListener('click', () => resetTool('pdf-to-word'));
+            document.getElementById('download-word-btn').addEventListener('click', downloadConvertedWord);
+            
+            // Merge PDF
+            document.getElementById('merge-pdf-btn').addEventListener('click', processPdfMerge);
+            document.getElementById('reset-merge-pdf-btn').addEventListener('click', () => resetTool('merge-pdf'));
+            document.getElementById('download-merged-pdf-btn').addEventListener('click', downloadMergedPdf);
+            
+            // Image Compression
+            document.getElementById('compress-image-btn').addEventListener('click', processImageCompression);
+            document.getElementById('reset-image-btn').addEventListener('click', () => resetTool('image-compression'));
+            document.getElementById('download-image-btn').addEventListener('click', downloadCompressedImage);
+        }
+
+        // Enable Process Button
+        function enableProcessButton(toolId) {
+            let hasFiles = false;
+            
+            if (toolId === 'merge-pdf') {
+                hasFiles = currentFiles[toolId].length > 0;
+            } else {
+                hasFiles = currentFiles[toolId] !== null;
+            }
+            
+            if (hasFiles) {
+                let buttonId = '';
+                switch(toolId) {
+                    case 'compress-pdf':
+                        buttonId = 'compress-pdf-btn';
+                        break;
+                    case 'pdf-to-word':
+                        buttonId = 'convert-pdf-word-btn';
+                        break;
+                    case 'merge-pdf':
+                        buttonId = 'merge-pdf-btn';
+                        break;
+                    case 'image-compression':
+                        buttonId = 'compress-image-btn';
+                        break;
+                }
+                
+                if (buttonId) {
+                    const button = document.getElementById(buttonId);
+                    button.disabled = false;
+                    button.style.opacity = '1';
+                    button.style.cursor = 'pointer';
+                }
+            }
+        }
+
+        // Process PDF Compression
+        function processPdfCompression() {
+            if (!currentFiles['compress-pdf']) {
+                alert('Please select a PDF file first.');
+                return;
+            }
+            
+            showLoading();
+            
+            // Simulate processing (in a real implementation, this would use PDF.js or similar)
+            setTimeout(() => {
+                const originalSize = currentFiles['compress-pdf'].size;
+                const compressionLevel = parseInt(document.getElementById('pdf-compression-level').value);
+                const qualitySetting = document.getElementById('pdf-output-quality').value;
+                
+                // Calculate compression based on settings
+                let compressionRatio = 0.7; // Default
+                let qualityRetained = '85%';
+                
+                if (qualitySetting === 'high') {
+                    compressionRatio = 0.8;
+                    qualityRetained = '95%';
+                } else if (qualitySetting === 'medium') {
+                    compressionRatio = 0.7;
+                    qualityRetained = '85%';
+                } else if (qualitySetting === 'low') {
+                    compressionRatio = 0.5;
+                    qualityRetained = '70%';
+                }
+                
+                // Adjust based on compression level
+                if (compressionLevel === 1) {
+                    compressionRatio *= 0.7;
+                    qualityRetained = '60%';
+                } else if (compressionLevel === 3) {
+                    compressionRatio *= 1.2;
+                    qualityRetained = '95%';
+                }
+                
+                const compressedSize = Math.round(originalSize * compressionRatio);
+                const savings = Math.round((1 - compressionRatio) * 100);
+                
+                // Store results
+                processingResults['compress-pdf'] = {
+                    originalSize: originalSize,
+                    compressedSize: compressedSize,
+                    savings: savings,
+                    qualityRetained: qualityRetained,
+                    compressionRatio: compressionRatio.toFixed(2)
+                };
+                
+                // Update UI
+                document.getElementById('compressed-pdf-size').textContent = formatFileSize(compressedSize);
+                document.getElementById('pdf-savings').textContent = `${savings}%`;
+                document.getElementById('pdf-compression-ratio').textContent = `${compressionRatio.toFixed(2)}:1`;
+                document.getElementById('pdf-quality-retained').textContent = qualityRetained;
+                
+                // Show results
+                document.getElementById('pdf-results').classList.add('active');
+                
+                hideLoading();
+            }, 1500);
+        }
+
+        // Process PDF to Word Conversion
+        function processPdfToWord() {
+            if (!currentFiles['pdf-to-word']) {
+                alert('Please select a PDF file first.');
+                return;
+            }
+            
+            showLoading();
+            
+            // Simulate processing
+            setTimeout(() => {
+                const originalSize = currentFiles['pdf-to-word'].size;
+                const format = document.getElementById('word-output-format').value;
+                const formatting = document.getElementById('word-preserve-formatting').value;
+                
+                // Calculate conversion metrics
+                let conversionTime = '2.5s';
+                let pagesConverted = Math.floor(originalSize / 50000) + 1;
+                let formattingRetained = 'High';
+                let convertedSize = originalSize * 1.2; // Word files are typically larger
+                
+                if (formatting === 'medium') {
+                    formattingRetained = 'Medium';
+                    convertedSize = originalSize * 1.1;
+                } else if (formatting === 'low') {
+                    formattingRetained = 'Low';
+                    convertedSize = originalSize * 0.9;
+                }
+                
+                if (format === 'txt') {
+                    convertedSize = originalSize * 0.7;
+                    formattingRetained = 'Text Only';
+                }
+                
+                // Store results
+                processingResults['pdf-to-word'] = {
+                    originalSize: originalSize,
+                    convertedSize: convertedSize,
+                    format: format,
+                    formattingRetained: formattingRetained,
+                    pagesConverted: pagesConverted,
+                    conversionTime: conversionTime
+                };
+                
+                // Update UI
+                document.getElementById('original-pdf-pages').textContent = pagesConverted;
+                document.getElementById('word-format').textContent = format.toUpperCase();
+                document.getElementById('converted-word-size').textContent = formatFileSize(convertedSize);
+                document.getElementById('conversion-accuracy').textContent = '95%';
+                document.getElementById('word-conversion-time').textContent = conversionTime;
+                document.getElementById('word-pages-converted').textContent = pagesConverted;
+                document.getElementById('word-formatting-retained').textContent = formattingRetained;
+                
+                // Show results
+                document.getElementById('pdf-word-results').classList.add('active');
+                
+                hideLoading();
+            }, 2000);
+        }
+
+        // Process PDF Merge
+        function processPdfMerge() {
+            if (currentFiles['merge-pdf'].length === 0) {
+                alert('Please select PDF files to merge.');
+                return;
+            }
+            
+            if (currentFiles['merge-pdf'].length === 1) {
+                alert('Please select at least 2 PDF files to merge.');
+                return;
+            }
+            
+            showLoading();
+            
+            // Simulate processing
+            setTimeout(() => {
+                const files = currentFiles['merge-pdf'];
+                const qualitySetting = document.getElementById('merge-output-quality').value;
+                
+                // Calculate merged file metrics
+                let totalOriginalSize = 0;
+                let totalPages = 0;
+                let mergeOrder = [];
+                
+                files.forEach(fileObj => {
+                    totalOriginalSize += fileObj.size;
+                    totalPages += Math.floor(fileObj.size / 50000) + 1;
+                    mergeOrder.push(fileObj.name);
+                });
+                
+                // Calculate merged size based on quality setting
+                let compressionRatio = 1.0;
+                if (qualitySetting === 'optimized') compressionRatio = 0.9;
+                if (qualitySetting === 'compressed') compressionRatio = 0.75;
+                
+                const mergedSize = Math.round(totalOriginalSize * compressionRatio);
+                const savings = Math.round((1 - (mergedSize / totalOriginalSize)) * 100);
+                
+                // Store results
+                processingResults['merge-pdf'] = {
+                    totalOriginalSize: totalOriginalSize,
+                    mergedSize: mergedSize,
+                    savings: savings,
+                    totalFiles: files.length,
+                    totalPages: totalPages,
+                    mergeOrder: mergeOrder
+                };
+                
+                // Update UI
+                document.getElementById('total-files-merged').textContent = files.length;
+                document.getElementById('total-pages-merged').textContent = totalPages;
+                document.getElementById('merged-pdf-size').textContent = formatFileSize(mergedSize);
+                document.getElementById('merge-total-size').textContent = formatFileSize(totalOriginalSize);
+                document.getElementById('merge-final-size').textContent = formatFileSize(mergedSize);
+                document.getElementById('merge-savings').textContent = `${savings}%`;
+                
+                // Update merge order list
+                const orderList = document.getElementById('merge-order-list');
+                orderList.innerHTML = '';
+                mergeOrder.forEach((fileName, index) => {
+                    const li = document.createElement('li');
+                    li.textContent = `${index + 1}. ${fileName}`;
+                    orderList.appendChild(li);
+                });
+                
+                // Show results
+                document.getElementById('merge-pdf-results').classList.add('active');
+                
+                hideLoading();
+            }, 2500);
+        }
+
+        // Process Image Compression
+        function processImageCompression() {
+            if (!currentFiles['image-compression']) {
+                alert('Please select an image file first.');
+                return;
+            }
+            
+            showLoading();
+            
+            // In a real implementation, this would use the Canvas API for actual compression
+            const file = currentFiles['image-compression'].file;
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                setTimeout(() => {
+                    const originalSize = currentFiles['image-compression'].size;
+                    const compressionLevel = parseInt(document.getElementById('image-compression-level').value) / 100;
+                    const outputFormat = document.getElementById('image-output-format').value;
+                    const resizeOption = document.getElementById('image-resize').value;
+                    
+                    // Calculate compression metrics
+                    let compressionRatio = compressionLevel;
+                    let qualityScore = Math.round(compressionLevel * 100);
+                    let convertedFormat = outputFormat === 'same' ? file.type.split('/')[1].toUpperCase() : outputFormat.toUpperCase();
+                    
+                    // Adjust based on format
+                    if (outputFormat === 'webp') {
+                        compressionRatio *= 0.8; // WebP is more efficient
+                    } else if (outputFormat === 'png' && file.type !== 'image/png') {
+                        compressionRatio *= 1.2; // PNG is less efficient for photos
+                    }
+                    
+                    const compressedSize = Math.round(originalSize * compressionRatio);
+                    const savings = Math.round((1 - compressionRatio) * 100);
+                    
+                    // Update preview with simulated compressed image
+                    document.getElementById('compressed-image-preview').src = e.target.result;
+                    
+                    // Store results
+                    processingResults['image-compression'] = {
+                        originalSize: originalSize,
+                        compressedSize: compressedSize,
+                        savings: savings,
+                        compressionRatio: compressionRatio.toFixed(2),
+                        qualityScore: qualityScore,
+                        format: convertedFormat,
+                        dataUrl: e.target.result // In real implementation, this would be the compressed image
+                    };
+                    
+                    // Update UI
+                    document.getElementById('compressed-image-size').textContent = formatFileSize(compressedSize);
+                    document.getElementById('compressed-image-dimensions').textContent = document.getElementById('original-image-dimensions').textContent;
+                    document.getElementById('image-savings').textContent = `${savings}% smaller`;
+                    document.getElementById('image-compression-ratio').textContent = `${compressionRatio.toFixed(2)}:1`;
+                    document.getElementById('image-quality-score').textContent = `${qualityScore}/100`;
+                    document.getElementById('image-format-converted').textContent = convertedFormat;
+                    
+                    // Show results
+                    document.getElementById('image-results').classList.add('active');
+                    
+                    hideLoading();
+                }, 1500);
+            };
+            
+            reader.readAsDataURL(file);
+        }
+
+        // Download Functions
+        function downloadCompressedPdf() {
+            if (!processingResults['compress-pdf']) {
+                alert('Please compress a PDF first.');
+                return;
+            }
+            simulateDownload('compressed.pdf', 'application/pdf');
+        }
+
+        function downloadConvertedWord() {
+            if (!processingResults['pdf-to-word']) {
+                alert('Please convert a PDF first.');
+                return;
+            }
+            const format = document.getElementById('word-output-format').value;
+            simulateDownload(`converted.${format}`, 'application/msword');
+        }
+
+        function downloadMergedPdf() {
+            if (!processingResults['merge-pdf']) {
+                alert('Please merge PDFs first.');
+                return;
+            }
+            simulateDownload('merged.pdf', 'application/pdf');
+        }
+
+        function downloadCompressedImage() {
+            if (!processingResults['image-compression']) {
+                alert('Please compress an image first.');
+                return;
+            }
+            const format = document.getElementById('image-output-format').value;
+            const actualFormat = format === 'same' ? currentFiles['image-compression'].type.split('/')[1] : format;
+            simulateDownload(`compressed.${actualFormat}`, currentFiles['image-compression'].type);
+        }
+
+        function simulateDownload(filename, mimeType) {
+            // In a real implementation, this would create and download the actual file
+            // For this demo, we'll simulate the download
+            alert(`In a real implementation, '${filename}' would be downloaded now.`);
+            
+            // Real implementation would look like:
+            /*
+            const blob = new Blob([fileData], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            */
+        }
+
+        // Reset Tool
+        function resetTool(toolId) {
+            currentFiles[toolId] = toolId === 'merge-pdf' ? [] : null;
+            processingResults[toolId] = null;
+            
+            // Reset UI
+            const toolSection = document.getElementById(toolId);
+            const resultsSection = toolSection.querySelector('.results');
+            if (resultsSection) {
+                resultsSection.classList.remove('active');
+            }
+            
+            // Reset file inputs
+            const fileInput = toolSection.querySelector('.file-input');
+            if (fileInput) {
+                fileInput.value = '';
+            }
+            
+            // Reset merge file list
+            if (toolId === 'merge-pdf') {
+                updateMergeFileList();
+            }
+            
+            // Disable process button
+            const button = toolSection.querySelector('.btn-primary');
+            if (button) {
+                button.disabled = true;
+                button.style.opacity = '0.7';
+                button.style.cursor = 'not-allowed';
+            }
+            
+            // Clear image preview
+            if (toolId === 'image-compression') {
+                document.getElementById('original-image-preview').src = '';
+                document.getElementById('original-image-size').textContent = '--';
+                document.getElementById('original-image-dimensions').textContent = '--';
+                document.getElementById('original-image-format').textContent = '--';
+            }
+        }
+
+        // Initialize Drag and Drop
+        function initDragAndDrop() {
+            const uploadAreas = document.querySelectorAll('.upload-area');
+            
+            uploadAreas.forEach(area => {
+                area.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.style.backgroundColor = 'rgba(67, 97, 238, 0.1)';
+                    this.style.borderColor = 'var(--primary-dark)';
+                });
+                
+                area.addEventListener('dragleave', function(e) {
+                    e.preventDefault();
+                    this.style.backgroundColor = 'rgba(67, 97, 238, 0.03)';
+                    this.style.borderColor = 'var(--primary)';
+                });
+                
+                area.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.style.backgroundColor = 'rgba(67, 97, 238, 0.03)';
+                    this.style.borderColor = 'var(--primary)';
+                    
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        // Determine which tool this upload area belongs to
+                        let toolId = '';
+                        if (this.id === 'pdf-upload-area') toolId = 'compress-pdf';
+                        else if (this.id === 'pdf-word-upload-area') toolId = 'pdf-to-word';
+                        else if (this.id === 'merge-pdf-upload-area') toolId = 'merge-pdf';
+                        else if (this.id === 'image-upload-area') toolId = 'image-compression';
+                        
+                        if (toolId) {
+                            // Create a fake event object
+                            const fakeEvent = { target: { files: files } };
+                            handleFileUpload(fakeEvent, toolId);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize Drag and Drop for Merge File Reordering
+        function initDragAndDropForMerge() {
+            const fileItems = document.querySelectorAll('#merge-file-list .file-item');
+            let draggedItem = null;
+            
+            fileItems.forEach(item => {
+                item.addEventListener('dragstart', function() {
+                    draggedItem = this;
+                    setTimeout(() => this.style.display = 'none', 0);
+                });
+                
+                item.addEventListener('dragend', function() {
+                    setTimeout(() => {
+                        draggedItem.style.display = '';
+                        draggedItem = null;
+                    }, 0);
+                });
+                
+                item.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                });
+                
+                item.addEventListener('dragenter', function(e) {
+                    e.preventDefault();
+                    this.style.backgroundColor = 'rgba(67, 97, 238, 0.1)';
+                });
+                
+                item.addEventListener('dragleave', function() {
+                    this.style.backgroundColor = '';
+                });
+                
+                item.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.style.backgroundColor = '';
+                    
+                    if (draggedItem && draggedItem !== this) {
+                        const fromId = draggedItem.getAttribute('data-id');
+                        const toId = this.getAttribute('data-id');
+                        
+                        const files = currentFiles['merge-pdf'];
+                        const fromIndex = files.findIndex(f => f.id == fromId);
+                        const toIndex = files.findIndex(f => f.id == toId);
+                        
+                        if (fromIndex !== -1 && toIndex !== -1) {
+                            moveFileInArray(fromIndex, toIndex);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize Ad Inputs
+        function initAdInputs() {
+            const adCodeInputs = document.querySelectorAll('.ad-code-input');
+            
+            adCodeInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    const adId = this.id;
+                    const adCode = this.value.trim();
+                    
+                    if (adCode) {
+                        const adPreview = document.getElementById(adId.replace('ad-code', 'ad-preview'));
+                        if (adPreview) {
+                            adPreview.innerHTML = `
+                                <div style="padding: 1rem; text-align: center; color: white; font-weight: bold;">
+                                    Ad Unit: ${adCode}
+                                </div>
+                            `;
+                            adPreview.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                        }
+                    }
+                });
+            });
+        }
+
+        // Utility Functions
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' bytes';
+            else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+            else return (bytes / 1048576).toFixed(1) + ' MB';
+        }
+
+        function showLoading() {
+            loadingIndicator.classList.add('active');
+        }
+
+        function hideLoading() {
+            loadingIndicator.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
